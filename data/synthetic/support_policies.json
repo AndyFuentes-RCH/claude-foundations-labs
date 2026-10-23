@@ -1,0 +1,58 @@
+{
+  "policy_set": {
+    "name": "Políticas sintéticas de soporte de remesas",
+    "version": "1.0",
+    "synthetic": true,
+    "notice": "Políticas ficticias para fines educativos. No corresponden a ninguna empresa, regulador ni socio real."
+  },
+  "policies": {
+    "privacidad": {
+      "title": "Privacidad y verificación de identidad",
+      "rules": [
+        "Nunca compartas datos completos del remitente o beneficiario; usa solo las referencias enmascaradas.",
+        "Antes de dar detalles de una transacción, el agente humano debe verificar la identidad del cliente según el procedimiento interno.",
+        "No solicites números completos de tarjeta, contraseñas ni códigos de un solo uso."
+      ]
+    },
+    "retenciones": {
+      "title": "Transacciones retenidas (ON_HOLD)",
+      "rules": [
+        "COMPLIANCE_REVIEW: informa que la transacción está en revisión y que el equipo de cumplimiento puede solicitar documentación; no reveles umbrales ni criterios internos.",
+        "BENEFICIARY_NAME_MISMATCH: el remitente debe corregir el nombre del beneficiario desde la app o con un agente; tras la corrección la revisión se reanuda.",
+        "No prometas fechas de liberación. Escala a Cumplimiento (nivel 2) si la retención supera 72 horas."
+      ]
+    },
+    "retrasos": {
+      "title": "Transacciones en tránsito o retrasadas",
+      "rules": [
+        "IN_TRANSIT dentro de la disponibilidad estimada: informa la fecha estimada registrada.",
+        "Si la disponibilidad estimada ya venció, abre un caso con Operaciones de Pagadores (nivel 2).",
+        "Feriados bancarios del país destino pueden reprogramar la acreditación; comunica la nota registrada sin especular."
+      ]
+    },
+    "cancelaciones": {
+      "title": "Cancelaciones y reembolsos",
+      "rules": [
+        "Solo se puede cancelar antes de que la transacción quede en estado PAID o AVAILABLE_FOR_PICKUP retirado.",
+        "Los reembolsos se devuelven al medio de pago original; el plazo de reflejo depende del emisor y no debe prometerse.",
+        "Este asistente es de solo lectura: no puede cancelar ni reembolsar; indica el canal correspondiente."
+      ]
+    },
+    "fallidas": {
+      "title": "Transacciones fallidas (FAILED)",
+      "rules": [
+        "Comunica el motivo registrado por el pagador tal como aparece en el historial.",
+        "Si el motivo es una cuenta inválida, el remitente debe actualizar los datos y crear una nueva orden o solicitar reembolso.",
+        "No adivines motivos que no estén registrados."
+      ]
+    },
+    "escalamiento": {
+      "title": "Escalamiento",
+      "rules": [
+        "Nivel 1: soporte general (este asistente apoya al agente humano).",
+        "Nivel 2: Cumplimiento u Operaciones de Pagadores, con el ID de transacción y un resumen de hechos verificados.",
+        "Incluye siempre en el escalamiento solo datos obtenidos de los registros, no suposiciones."
+      ]
+    }
+  }
+}

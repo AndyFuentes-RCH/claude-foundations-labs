@@ -1,0 +1,25 @@
+# Entorno y dependencias
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Secretos: nunca versionar credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*credentials*.json
+application_default_credentials.json
+
+# Sistema / editores
+.DS_Store
+.idea/
+.vscode/
+
+# Local de Claude Code (preferencias personales)
+.claude/settings.local.json

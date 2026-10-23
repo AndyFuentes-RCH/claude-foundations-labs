@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-foundations-labs"
+version = "0.1.0"
+description = "Laboratorios prácticos con Claude sobre un caso sintético de soporte de remesas."
+readme = "README.md"
+authors = [{ name = "Andy Fuentes" }]
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic[vertex,bedrock]==2.2.0",
+    "mcp==2.3.0",
+    "fastapi==0.161.1",
+    "uvicorn==0.54.0",
+    "pydantic==2.14.1",
+    "python-dotenv==1.2.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "pytest-asyncio==1.4.0",
+    "httpx==0.28.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"cfl.web" = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-ra"
