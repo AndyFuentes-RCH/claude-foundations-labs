@@ -117,8 +117,16 @@ class MockProvider:
             elif r["name"] == "get_transaction_history" and payload.get("found"):
                 events = payload["history"]["events"]
                 lines.append(f"- Historial ({len(events)} eventos): " + " → ".join(e["status"] for e in events) + ".")
+        hold_reasons = {
+            (r["payload"] or {}).get("transaction", {}).get("hold_reason")
+            for r in results
+            if r["name"] == "get_transaction_status"
+        } - {None}
         for policy in policies:
-            lines.append(f"- Política aplicable «{policy['title']}»: {policy['rules'][0]}")
+            # Prioriza las reglas que mencionan el motivo registrado; si no hay, usa la primera.
+            specific = [rule for rule in policy["rules"] if any(reason in rule for reason in hold_reasons)]
+            for rule in specific or policy["rules"][:1]:
+                lines.append(f"- Política aplicable «{policy['title']}»: {rule}")
         lines.append("Fuente: herramientas de solo lectura sobre datos sintéticos.")
         return "\n".join(lines)
 

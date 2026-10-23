@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "remesas-sinteticas": {
+      "type": "stdio",
+      "command": ".venv/bin/python",
+      "args": ["-m", "cfl.mcp_server.server"]
+    }
+  }
+}

@@ -113,6 +113,10 @@ def test_mock_on_hold_consults_policy(toolbox):
     assert result.answer.startswith(MOCK_BANNER)
     assert "BENEFICIARY_NAME_MISMATCH" in result.answer
     assert result.mode == "MOCK" and result.ungrounded_ids == []
+    # Regresión: la regla citada debe ser la del motivo registrado, no la de cumplimiento.
+    policy_lines = [line for line in result.answer.splitlines() if "Política aplicable" in line]
+    assert policy_lines and all("BENEFICIARY_NAME_MISMATCH" in line for line in policy_lines)
+    assert "COMPLIANCE_REVIEW" not in result.answer
 
 
 def test_mock_not_found_does_not_invent(toolbox):

@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "InvocarClaudeEnBedrockMantle",
+      "Effect": "Allow",
+      "Action": "bedrock-mantle:CreateInference",
+      "Resource": "*"
+    },
+    {
+      "Sid": "DenegarBearerTokensDeLargaDuracion",
+      "Effect": "Deny",
+      "Action": "bedrock:CallWithBearerToken",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": { "bedrock:BearerTokenType": "SHORT_TERM" }
+      }
+    }
+  ]
+}

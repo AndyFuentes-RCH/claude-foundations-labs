@@ -270,8 +270,25 @@ async function init() {
   $("assistant-form").addEventListener("submit", runAssistant);
   $("mcp-form").addEventListener("submit", runMcp);
   $("prompt-run").addEventListener("click", runPromptLab);
+  // Enlaces de demostración: ?lab=02&provider=mock&q=...&run=1 (o #lab-02)
+  const params = new URLSearchParams(location.search);
   const fromHash = location.hash.match(/^#lab-(\d{2})$/);
-  await selectLab(fromHash ? fromHash[1] : "02");
+  const key = params.get("lab") || (fromHash ? fromHash[1] : "02");
+  await selectLab(state.labs.some((l) => l.key === key) ? key : "02");
+  if (params.get("provider") && state.current.providers.includes(params.get("provider"))) {
+    $("provider-select").value = params.get("provider");
+    $("provider-select").dispatchEvent(new Event("change"));
+  }
+  if (params.get("q")) {
+    $("query").value = params.get("q");
+    $("mcp-id").value = params.get("q");
+  }
+  if (params.get("run") === "1") {
+    const kind = state.current.kind;
+    if (kind === "assistant" || kind === "cache") $("assistant-form").requestSubmit();
+    else if (kind === "mcp") $("mcp-form").requestSubmit();
+    else $("prompt-run").click();
+  }
 }
 
 init();
