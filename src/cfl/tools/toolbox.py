@@ -13,6 +13,7 @@ from typing import Any, Callable
 from pydantic import BaseModel, ConfigDict, ValidationError, field_validator
 
 from cfl.config import Settings
+from cfl.domain.cache import TTLCachedRepository
 from cfl.domain.errors import DataSourceError, InvalidTransactionIdError
 from cfl.domain.models import normalize_transaction_id
 from cfl.domain.policies import PolicyBook
@@ -210,5 +211,14 @@ class Toolbox:
 
 def build_default_toolbox(settings: Settings | None = None) -> Toolbox:
     settings = settings or Settings.from_env()
-    repository = JsonTransactionRepository(settings.transactions_path, latency_ms=settings.simulated_latency_ms)
+    repository: TransactionRepository = JsonTransactionRepository(
+        settings.transactions_path, latency_ms=settings.simulated_latency_ms
+    )
+    if settings.cache_ttl_seconds > 0:  # Proyecto 4: caché TTL (CFL_CACHE_TTL_SECONDS=0 la desactiva)
+        repository = TTLCachedRepository(
+            repository,
+            ttl_seconds=settings.cache_ttl_seconds,
+            negative_ttl_seconds=settings.cache_negative_ttl_seconds,
+            max_entries=settings.cache_max_entries,
+        )
     return Toolbox(repository, PolicyBook(settings.policies_path))

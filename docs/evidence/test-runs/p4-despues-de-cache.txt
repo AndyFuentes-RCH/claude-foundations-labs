@@ -1,0 +1,8 @@
+Repositorio: TTLCachedRepository | latencia simulada: 150 ms
+- 'historial de RMX-2026-000104': lecturas al origen=1, tiempo=153 ms
+- '¿Cuál es el estado de RMX-2026-000104?': lecturas al origen=0, tiempo=0 ms
+- '¿Cuál es el estado de RMX-2026-000104?': lecturas al origen=0, tiempo=0 ms
+- 'Estado de RMX-2026-999999': lecturas al origen=1, tiempo=151 ms
+- 'Estado de RMX-2026-999999': lecturas al origen=0, tiempo=0 ms
+TOTAL lecturas al origen=2, tiempo total=305 ms
+Métricas de caché: {'hits': 4, 'misses': 2, 'expired': 0, 'evicted': 0, 'size': 2, 'ttl_seconds': 30.0, 'negative_ttl_seconds': 10.0}

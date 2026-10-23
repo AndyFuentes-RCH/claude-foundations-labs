@@ -73,10 +73,10 @@ LABS: tuple[Lab, ...] = (
         key="04", folder="04-claude-code",
         title="Desarrollo con Claude Code: caché con TTL para consultas de transacciones",
         courses=("Claude Code in Action",),
-        kind="cache", status="Preparado",
-        status_note="Problema y comportamiento esperado registrados antes de modificar el código.",
+        kind="cache", status="Validado con Claude",
+        status_note="Mejora realizada en una sesión real de Claude Code: ISSUE registrado antes del código, caché TTL implementada, 14 pruebas nuevas y medición 6→2 lecturas al origen.",
         providers=("mock", "anthropic"), examples=ASSISTANT_EXAMPLES[:3],
-        materials=("ISSUE.md",),
+        materials=("ISSUE.md", "README.md"),
     ),
     Lab(
         key="05", folder="05-claude-google-cloud",

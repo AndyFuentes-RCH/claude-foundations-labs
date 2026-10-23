@@ -25,6 +25,13 @@ def _int(value: str | None, default: int) -> int:
         return default
 
 
+def _float(value: str | None, default: float) -> float:
+    try:
+        return float(value) if value not in (None, "") else default
+    except ValueError:
+        return default
+
+
 def _str(value: str | None, default: str) -> str:
     return value.strip() if value and value.strip() else default
 
@@ -37,6 +44,9 @@ class Settings:
     effort: str = "medium"
     max_tokens: int = 16000
     simulated_latency_ms: int = 0
+    cache_ttl_seconds: float = 30.0
+    cache_negative_ttl_seconds: float = 10.0
+    cache_max_entries: int = 1000
     evidence_dir: Path = REPO_ROOT / "docs" / "evidence"
     transactions_path: Path = DATA_DIR / "transactions.json"
     policies_path: Path = DATA_DIR / "support_policies.json"
@@ -69,6 +79,9 @@ class Settings:
             effort=_str(env.get("CFL_EFFORT"), "medium"),
             max_tokens=_int(env.get("CFL_MAX_TOKENS"), 16000),
             simulated_latency_ms=max(0, _int(env.get("CFL_SIMULATED_LATENCY_MS"), 0)),
+            cache_ttl_seconds=max(0.0, _float(env.get("CFL_CACHE_TTL_SECONDS"), 30.0)),
+            cache_negative_ttl_seconds=max(0.0, _float(env.get("CFL_CACHE_NEGATIVE_TTL_SECONDS"), 10.0)),
+            cache_max_entries=max(1, _int(env.get("CFL_CACHE_MAX_ENTRIES"), 1000)),
             evidence_dir=evidence_dir,
             anthropic_model=_str(env.get("CFL_ANTHROPIC_MODEL"), "claude-opus-5-5"),
             enable_server_fallbacks=_bool(env.get("CFL_ENABLE_SERVER_FALLBACKS"), default=True),
