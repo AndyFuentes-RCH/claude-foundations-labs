@@ -49,8 +49,6 @@ Tomadas con Chrome headless el 2026-10-23 contra el servidor local (`docs/eviden
 | `app-06-bedrock-pendiente.png` | Bedrock en PENDIENTE con requisitos faltantes |
 | `app-07-mcp-invalido.png` | MCP local: entrada inválida → `is_error=true` |
 
-Capturas que requieren tu intervención: [capturas-pendientes.md](capturas-pendientes.md).
-
 ## 4. Estado del código
 Historial en `git log` (commits locales, sin push). Hitos: `91dacca` → `988f96d` → `e391b26` (ISSUE P4) → `d8bfb2d` (caché) →
 commits posteriores de documentación y evidencia.

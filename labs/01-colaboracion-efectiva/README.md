@@ -39,4 +39,3 @@ Sin credenciales el comando termina en **PENDIENTE** y no genera contenido. Desp
 ## Pendiente
 - [ ] Ejecutar en LIVE (requiere tu API key y autorización de consumo).
 - [ ] Revisión humana de ambas salidas por Andy Fuentes.
-- [ ] Capturas indicadas en [docs/evidence/capturas-pendientes.md](../../docs/evidence/capturas-pendientes.md).

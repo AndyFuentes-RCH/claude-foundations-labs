@@ -54,6 +54,6 @@ mapeo de `NoCredentialsError`. Ninguna prueba contacta a AWS.
 
 ## Pendiente
 - [ ] Cuenta AWS con acceso al modelo, rol/perfil con la política mínima (tu intervención).
-- [ ] Autorizar el consumo y ejecutar la prueba real; capturas de terminal y CloudTrail/CloudWatch.
+- [ ] Autorizar el consumo y ejecutar la prueba real.
 
 Referencia: "Claude in Amazon Bedrock" en platform.claude.com y "bedrock-mantle" en docs.aws.amazon.com (consultadas el 2026-10-23).

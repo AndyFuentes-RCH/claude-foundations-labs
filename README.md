@@ -14,7 +14,7 @@ Anthropic Academy, sobre un caso común de **soporte de remesas** con datos **10
 | 1 | [Colaboración efectiva: requisitos → especificación](labs/01-colaboracion-efectiva/) | AI Fluency · Claude 101 | Pendiente de credenciales o intervención | Ejecución LIVE + tu revisión humana |
 | 2 | [Asistente de remesas con Claude API](labs/02-asistente-claude-api/) | Building with the Claude API | Validado localmente | Ejecución LIVE con API key |
 | 3 | [Flujo de productividad](labs/03-flujo-productividad/) | Claude 101 · AI Fluency | Pendiente de credenciales o intervención | Tu práctica en Claude.ai + capturas |
-| 4 | [Desarrollo con Claude Code: caché TTL](labs/04-claude-code/) | Claude Code in Action | Validado con Claude | — (capturas opcionales de la sesión) |
+| 4 | [Desarrollo con Claude Code: caché TTL](labs/04-claude-code/) | Claude Code in Action | Validado con Claude | — |
 | 5 | [Claude en Google Cloud (Vertex AI)](labs/05-claude-google-cloud/) | Claude on Google Cloud | Pendiente de credenciales o intervención | Proyecto GCP, ADC y autorización de gasto |
 | 6 | [Claude en Amazon Bedrock](labs/06-claude-amazon-bedrock/) | Claude with Amazon Bedrock | Pendiente de credenciales o intervención | Cuenta AWS, acceso al modelo y autorización de gasto |
 | 7 | [Servidor MCP](labs/07-model-context-protocol/) | Introduction to Model Context Protocol | Validado localmente | Aprobar el servidor en Claude Code y probarlo |
@@ -77,7 +77,6 @@ Arquitectura detallada: [docs/architecture.md](docs/architecture.md). Instruccio
 ## Evidencia
 - [docs/evidence/README.md](docs/evidence/README.md): índice de evidencias y registro de cada ejecución.
 - [docs/claude-usage-log.md](docs/claude-usage-log.md): uso real de Claude y sus herramientas para construir este repositorio.
-- [docs/evidence/capturas-pendientes.md](docs/evidence/capturas-pendientes.md): capturas que debes tomar tú.
 - [docs/demo-script.md](docs/demo-script.md): guion de demostración de 5 a 8 minutos.
 
 ## Seguridad

@@ -21,7 +21,6 @@
 | 1 | Ejecutar ambos prompts en LIVE y completar `revision-humana.md` | Andy | API key + autorizar ~2 llamadas |
 | 2 | Ejecución LIVE con los casos de demostración | Andy (o Claude con tu autorización) | API key + autorizar consumo |
 | 3 | Práctica en Claude.ai y capturas | Andy | Cuenta de Claude.ai |
-| 4 | (Opcional) capturas de la sesión de Claude Code | Andy | — |
 | 5 | Proyecto GCP, Model Garden, ADC y prueba real | Andy | Credenciales GCP + autorizar gasto |
 | 6 | Cuenta AWS, acceso al modelo, perfil con política mínima y prueba real | Andy | Credenciales AWS + autorizar gasto |
 | 7 | Aprobar `remesas-sinteticas` en Claude Code (o configurar Claude Desktop) y probarlo | Andy | Aprobación del servidor |

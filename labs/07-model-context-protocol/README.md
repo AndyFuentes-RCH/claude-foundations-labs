@@ -66,10 +66,9 @@ Reinicia Claude Desktop y verifica el icono de herramientas.
 públicamente por HTTPS (con autenticación): **no lo expongas** con datos reales; aquí no se ha hecho.
 
 ## Cómo registrar la evidencia conectada a Claude
-Cuando hagas la prueba en Claude Code o Claude Desktop, guarda capturas (ver
-[capturas pendientes](../../docs/evidence/capturas-pendientes.md), sección P7) y añade una entrada manual en
+Cuando hagas la prueba en Claude Code o Claude Desktop, añade una entrada manual en
 [docs/evidence/README.md](../../docs/evidence/README.md) con fecha, cliente, modelo y resultado. Solo entonces el estado
 puede pasar a "Validado con Claude".
 
 ## Pendiente
-- [ ] Ejecutar la conexión real con Claude Code o Claude Desktop y capturarla.
+- [ ] Ejecutar la conexión real con Claude Code o Claude Desktop.

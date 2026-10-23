@@ -50,4 +50,3 @@ En la interfaz web, elige "Proyecto 04", ejecuta dos veces la misma consulta y o
 1. Haz checkout del commit anterior a la mejora: `git switch -c practica-p4 e391b26`.
 2. Abre Claude Code en la raíz (`claude`) y pide: *"Lee labs/04-claude-code/ISSUE.md e implementa la caché siguiendo
    CLAUDE.md. Primero propón el plan; luego implementa, ejecuta pytest y la medición."*
-3. Toma las capturas indicadas en [docs/evidence/capturas-pendientes.md](../../docs/evidence/capturas-pendientes.md) (sección P4).

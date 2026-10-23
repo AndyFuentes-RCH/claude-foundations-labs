@@ -43,6 +43,6 @@ configuración. Ninguna prueba contacta a Google Cloud.
 
 ## Pendiente
 - [ ] Proyecto GCP, habilitación del modelo y credenciales ADC (tu intervención).
-- [ ] Autorizar el consumo y ejecutar la prueba real; capturar la terminal y la consola de GCP (ver capturas pendientes).
+- [ ] Autorizar el consumo y ejecutar la prueba real.
 
 Referencia: documentación oficial "Claude Models on Google Cloud" en platform.claude.com (consultada el 2026-10-23).

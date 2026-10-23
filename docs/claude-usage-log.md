@@ -50,6 +50,6 @@ automáticamente modelo, request-id y tokens.
 ## Prácticas pendientes de Andy (añadir aquí cuando ocurran)
 | Fecha | Herramienta | Práctica | Evidencia |
 |-------|-------------|----------|-----------|
-| _pendiente_ | Claude.ai | Proyecto 3 | capturas `docs/evidence/screenshots/p3/` |
-| _pendiente_ | Claude Code | Proyecto 7, conexión MCP real | capturas `docs/evidence/screenshots/p7/` |
+| _pendiente_ | Claude.ai | Proyecto 3 | guía de capturas del Proyecto 3 |
+| _pendiente_ | Claude Code | Proyecto 7, conexión MCP real | entrada manual en `docs/evidence/README.md` |
 | _pendiente_ | Claude API | Proyectos 1 y 2 en LIVE | `runs.jsonl` + `labs/01-*/outputs/` |
