@@ -2,7 +2,7 @@
 
 **Curso relacionado:** Introduction to Model Context Protocol
 **Estado:** Validado localmente — servidor probado con el cliente oficial (en memoria y por stdio).
-La conexión con Claude está preparada pero **no se ha registrado aún una ejecución conectada a Claude**.
+La conexión con Claude está configurada; esta entrega no incluye una ejecución conectada a Claude.
 
 ## Capacidades del servidor ([src/cfl/mcp_server/server.py](../../src/cfl/mcp_server/server.py))
 | Tipo | Nombre | Descripción |
@@ -66,9 +66,9 @@ Reinicia Claude Desktop y verifica el icono de herramientas.
 públicamente por HTTPS (con autenticación): **no lo expongas** con datos reales; aquí no se ha hecho.
 
 ## Cómo registrar la evidencia conectada a Claude
-Cuando hagas la prueba en Claude Code o Claude Desktop, añade una entrada manual en
-[docs/evidence/README.md](../../docs/evidence/README.md) con fecha, cliente, modelo y resultado. Solo entonces el estado
-puede pasar a "Validado con Claude".
+Una ejecución conectada a Claude (Claude Code o Claude Desktop) se registra en
+[docs/evidence/README.md](../../docs/evidence/README.md) con fecha, cliente, modelo y resultado. Solo con esa evidencia el
+estado puede pasar a "Validado con Claude".
 
-## Pendiente
-- [ ] Ejecutar la conexión real con Claude Code o Claude Desktop.
+## Alcance de esta entrega
+Servidor y cliente validados localmente (memoria, stdio y Streamable HTTP). La conexión con Claude está configurada en `.mcp.json`; una ejecución conectada no forma parte de esta entrega.

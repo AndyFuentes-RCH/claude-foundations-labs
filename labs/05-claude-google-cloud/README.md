@@ -2,7 +2,7 @@
 
 **Curso relacionado:** Claude on Google Cloud
 **Estado:** Pendiente de credenciales o intervención — el adaptador está implementado y probado **sin red**;
-la validación en vivo no se ha ejecutado. No se aprovisionó ningún recurso ni se generó consumo.
+la validación en vivo no forma parte de esta entrega. No se aprovisionó ningún recurso ni se generó consumo.
 
 ## Qué se implementó
 - `build_live_provider("vertex")` en [src/cfl/providers/factory.py](../../src/cfl/providers/factory.py) crea
@@ -41,8 +41,7 @@ quedan en `docs/evidence/runs/runs.jsonl` con `project = 05-claude-google-cloud`
 host `aiplatform.googleapis.com` y la ausencia de `fallbacks`; `test_vertex_status_reads_env` verifica la lectura de
 configuración. Ninguna prueba contacta a Google Cloud.
 
-## Pendiente
-- [ ] Proyecto GCP, habilitación del modelo y credenciales ADC (tu intervención).
-- [ ] Autorizar el consumo y ejecutar la prueba real.
+## Alcance de esta entrega
+Adaptador implementado y probado sin red. La validación en vivo requiere un proyecto GCP con el modelo habilitado, credenciales ADC y autorización de consumo.
 
 Referencia: documentación oficial "Claude Models on Google Cloud" en platform.claude.com (consultada el 2026-10-23).

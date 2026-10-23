@@ -9,21 +9,21 @@ Anthropic Academy, sobre un caso común de **soporte de remesas** con datos **10
 > Ningún dato corresponde a clientes, operaciones financieras, socios ni empresas reales.
 
 ## Estado de los laboratorios
-| # | Proyecto | Curso(s) | Estado | Qué falta |
+| # | Proyecto | Curso(s) | Estado | Validación en vivo |
 |---|----------|----------|--------|-----------|
-| 1 | [Colaboración efectiva: requisitos → especificación](labs/01-colaboracion-efectiva/) | AI Fluency · Claude 101 | Pendiente de credenciales o intervención | Ejecución LIVE + tu revisión humana |
-| 2 | [Asistente de remesas con Claude API](labs/02-asistente-claude-api/) | Building with the Claude API | Validado localmente | Ejecución LIVE con API key |
-| 3 | [Flujo de productividad](labs/03-flujo-productividad/) | Claude 101 · AI Fluency | Pendiente de credenciales o intervención | Tu práctica en Claude.ai + capturas |
-| 4 | [Desarrollo con Claude Code: caché TTL](labs/04-claude-code/) | Claude Code in Action | Validado con Claude | — |
-| 5 | [Claude en Google Cloud (Vertex AI)](labs/05-claude-google-cloud/) | Claude on Google Cloud | Pendiente de credenciales o intervención | Proyecto GCP, ADC y autorización de gasto |
-| 6 | [Claude en Amazon Bedrock](labs/06-claude-amazon-bedrock/) | Claude with Amazon Bedrock | Pendiente de credenciales o intervención | Cuenta AWS, acceso al modelo y autorización de gasto |
-| 7 | [Servidor MCP](labs/07-model-context-protocol/) | Introduction to Model Context Protocol | Validado localmente | Aprobar el servidor en Claude Code y probarlo |
+| 1 | [Colaboración efectiva: requisitos → especificación](labs/01-colaboracion-efectiva/) | AI Fluency · Claude 101 | Pendiente de credenciales o intervención | Requiere API key; incluye plantilla de revisión humana |
+| 2 | [Asistente de remesas con Claude API](labs/02-asistente-claude-api/) | Building with the Claude API | Validado localmente | Requiere API key |
+| 3 | [Flujo de productividad](labs/03-flujo-productividad/) | Claude 101 · AI Fluency | Pendiente de credenciales o intervención | Práctica en Claude.ai (prompts y guía incluidos) |
+| 4 | [Desarrollo con Claude Code: caché TTL](labs/04-claude-code/) | Claude Code in Action | Realizado con Claude Code |
+| 5 | [Claude en Google Cloud (Vertex AI)](labs/05-claude-google-cloud/) | Claude on Google Cloud | Pendiente de credenciales o intervención | Requiere proyecto GCP y ADC |
+| 6 | [Claude en Amazon Bedrock](labs/06-claude-amazon-bedrock/) | Claude with Amazon Bedrock | Pendiente de credenciales o intervención | Requiere cuenta AWS con acceso al modelo |
+| 7 | [Servidor MCP](labs/07-model-context-protocol/) | Introduction to Model Context Protocol | Validado localmente | Configuración `.mcp.json` incluida |
 
 Definición de estados: **Preparado** (código/materiales listos, sin ejecutar) · **Validado localmente** (pruebas y
 ejecuciones locales sin Claude) · **Validado con Claude** (ejecución real con Claude registrada) · **Pendiente de
 credenciales o intervención** (requiere algo que solo tú puedes aportar).
 
-Más detalle: [mapa de cursos y evidencias](docs/course-map.md) · [limitaciones y pendientes](docs/limitations.md).
+Más detalle: [mapa de cursos y evidencias](docs/course-map.md) · [limitaciones y alcance](docs/limitations.md).
 
 ## Modos de ejecución
 | Modo | Significado |

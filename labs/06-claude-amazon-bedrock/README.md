@@ -52,8 +52,7 @@ Para soporte ante fallos, AWS pide el `request-id` que registra este proyecto.
 falsas y verifica el host `bedrock-mantle.us-east-1`; `test_map_connection_and_cloud_credential_errors` verifica el
 mapeo de `NoCredentialsError`. Ninguna prueba contacta a AWS.
 
-## Pendiente
-- [ ] Cuenta AWS con acceso al modelo, rol/perfil con la política mínima (tu intervención).
-- [ ] Autorizar el consumo y ejecutar la prueba real.
+## Alcance de esta entrega
+Adaptador implementado y probado sin red; sin despliegue en AWS. La validación en vivo requiere una cuenta AWS con acceso al modelo, un perfil con la política mínima y autorización de consumo.
 
 Referencia: "Claude in Amazon Bedrock" en platform.claude.com y "bedrock-mantle" en docs.aws.amazon.com (consultadas el 2026-10-23).

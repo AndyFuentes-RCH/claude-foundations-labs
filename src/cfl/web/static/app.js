@@ -132,7 +132,7 @@ async function loadPromptLab(lab) {
   const p = data.providers[0];
   setMeta({ provider: p?.label, model: p?.model, mode: lab.kind === "manual" ? "PENDIENTE" : p?.mode });
   $("prompt-intro").textContent = lab.kind === "manual"
-    ? "Práctica manual en Claude.ai (PENDIENTE de tu intervención). Opcionalmente puede ejecutarse por API; ambas ejecuciones se registran por separado."
+    ? "Práctica manual en Claude.ai. Opcionalmente puede ejecutarse por API; ambas ejecuciones se registran por separado."
     : "Compara el prompt inicial con el mejorado. La ejecución por API guarda ambas salidas con sus metadatos reales.";
   const sel = $("prompt-provider");
   sel.innerHTML = "";

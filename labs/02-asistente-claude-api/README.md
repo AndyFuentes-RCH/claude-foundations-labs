@@ -1,7 +1,7 @@
 # Proyecto 2 · Asistente de remesas con la Claude API
 
 **Curso relacionado:** Building with the Claude API
-**Estado:** Validado localmente — probado con pytest y en modo MOCK. La ejecución LIVE contra Claude queda pendiente de API key.
+**Estado:** Validado localmente — probado con pytest y en modo MOCK. La ejecución LIVE requiere API key.
 
 ## Qué hace
 Un asistente para agentes de soporte que consulta el estado de remesas **sintéticas** con herramientas de solo lectura y
@@ -49,5 +49,5 @@ Cada ejecución se registra en `docs/evidence/runs/runs.jsonl` con request-id y 
 | `RMX-2026-999999` | Dice que no existe y no inventa datos |
 | `RMX-12` | Explica el formato válido |
 
-## Pendiente
-- [ ] Ejecución LIVE con `ANTHROPIC_API_KEY` (registrará request-id y tokens reales).
+## Alcance de esta entrega
+Validado con pytest y en modo MOCK. La ejecución LIVE requiere `ANTHROPIC_API_KEY`; al hacerse, registra request-id y tokens reales.

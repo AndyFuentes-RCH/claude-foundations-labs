@@ -1,7 +1,7 @@
 # Criterios de evaluación — Proyecto 1
 
 Cada respuesta (prompt inicial y prompt mejorado) se evalúa con los mismos criterios. Los **automáticos** los calcula
-`python -m cfl.labs.prompt_lab evaluar 01` sobre las salidas guardadas; los **humanos** los completa Andy Fuentes en
+`python -m cfl.labs.prompt_lab evaluar 01` sobre las salidas guardadas; los **humanos** se registran en
 [revision-humana.md](../revision-humana.md). Ninguna puntuación humana se rellena automáticamente.
 
 | # | Criterio | Tipo | Cómo se verifica | Peso |

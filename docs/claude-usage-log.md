@@ -46,10 +46,3 @@ Este registro distingue **cómo se construyó el repositorio** (con Claude Code)
 
 Todas las ejecuciones registradas hasta ahora son **MOCK** (sin Claude). Cuando ejecutes en LIVE, el registro capturará
 automáticamente modelo, request-id y tokens.
-
-## Prácticas pendientes de Andy (añadir aquí cuando ocurran)
-| Fecha | Herramienta | Práctica | Evidencia |
-|-------|-------------|----------|-----------|
-| _pendiente_ | Claude.ai | Proyecto 3 | guía de capturas del Proyecto 3 |
-| _pendiente_ | Claude Code | Proyecto 7, conexión MCP real | entrada manual en `docs/evidence/README.md` |
-| _pendiente_ | Claude API | Proyectos 1 y 2 en LIVE | `runs.jsonl` + `labs/01-*/outputs/` |

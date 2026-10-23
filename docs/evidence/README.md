@@ -52,8 +52,3 @@ Tomadas con Chrome headless el 2026-10-23 contra el servidor local (`docs/eviden
 ## 4. Estado del código
 Historial en `git log` (commits locales, sin push). Hitos: `91dacca` → `988f96d` → `e391b26` (ISSUE P4) → `d8bfb2d` (caché) →
 commits posteriores de documentación y evidencia.
-
-## 5. Evidencia manual (completar por Andy)
-| Fecha y hora reales | Proyecto | Herramienta / proveedor | Modelo mostrado | Qué se hizo | Archivos |
-|---------------------|----------|-------------------------|-----------------|-------------|----------|
-| | | | | | |

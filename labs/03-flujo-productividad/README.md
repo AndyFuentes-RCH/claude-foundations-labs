@@ -1,7 +1,7 @@
 # Proyecto 3 · Flujo de productividad con Claude
 
 **Cursos relacionados:** Claude 101 · AI Fluency: Framework & Foundations
-**Estado:** Pendiente de credenciales o intervención — requiere tu práctica manual en Claude.ai.
+**Estado:** Pendiente de credenciales o intervención — la práctica se realiza manualmente en Claude.ai.
 
 ## Objetivo
 A partir de un documento sintético de requisitos, obtener con Claude: (1) un resumen ejecutivo, (2) una tabla de acciones
@@ -24,13 +24,13 @@ No mezcles ambas evidencias: una salida de la API no demuestra la práctica en C
 3. Toma las capturas de la [guía de capturas](guia-capturas.md).
 4. Copia cada respuesta tal cual en `outputs-claude-ai/` (`01-resumen.md`, `02-tabla.md`, `03-correo.md`) e indica arriba
    la fecha, el modelo que mostraba la interfaz y el enlace de la conversación si decides compartirla.
-5. Revisa con la lista de verificación de abajo y anota hallazgos en `outputs-claude-ai/revision.md`.
+5. Revisa con los criterios de revisión de abajo y anota hallazgos en `outputs-claude-ai/revision.md`.
 
-## Lista de verificación (discernimiento)
-- [ ] El resumen respeta el máximo de palabras y no añade datos ausentes.
-- [ ] La tabla usa "Sin definir" donde el documento no da responsable o fecha (p. ej., centro de preferencias).
-- [ ] El correo marca con [CONFIRMAR] lo que falta y no promete fechas que no existen.
-- [ ] Los riesgos (límite de correo 10.000/h vs. pico 14.000/h; textos de Legal) aparecen y están bien priorizados.
+## Criterios de revisión (discernimiento)
+- El resumen respeta el máximo de palabras y no añade datos ausentes.
+- La tabla usa "Sin definir" donde el documento no da responsable o fecha (p. ej., centro de preferencias).
+- El correo marca con [CONFIRMAR] lo que falta y no promete fechas que no existen.
+- Los riesgos (límite de correo 10.000/h vs. pico 14.000/h; textos de Legal) aparecen y están bien priorizados.
 
 ## Ejecución por API (opcional)
 ```bash
@@ -38,6 +38,5 @@ export ANTHROPIC_API_KEY=... CFL_ALLOW_LIVE_CALLS=true
 .venv/bin/python -m cfl.labs.prompt_lab ejecutar 03 --provider anthropic
 ```
 
-## Pendiente
-- [ ] Práctica en Claude.ai y capturas (tu intervención).
-- [ ] (Opcional) Ejecución por API.
+## Alcance de esta entrega
+Incluye documento sintético, prompts para Claude.ai y para la API, guía de capturas y criterios de revisión. Las salidas de Claude.ai y de la API no forman parte de esta entrega.

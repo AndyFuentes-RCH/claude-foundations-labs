@@ -1,11 +1,11 @@
 # Revisión humana — Proyecto 1
 
-> **Estado: PENDIENTE de revisión por Andy Fuentes.** Esta sección no la completa Claude ni ningún script.
-> Complétala después de ejecutar el laboratorio en modo LIVE (ver README) y leer ambas salidas en `outputs/`.
+> Plantilla de revisión humana. No la completa Claude ni ningún script: se llena tras una ejecución LIVE,
+> leyendo ambas salidas en `outputs/`.
 
 **Revisor:** Andy Fuentes
-**Fecha de revisión:** _pendiente_
-**Salidas revisadas (run_id):** _pendiente_
+**Fecha de revisión:**
+**Salidas revisadas (run_id):**
 
 ## Puntuación por criterio (0, 1 o 2)
 
@@ -23,8 +23,8 @@
 - ¿Qué omitió que un arquitecto senior sí incluiría?
 
 ## Diligencia: decisión
-- [ ] La especificación puede usarse como borrador con las correcciones anotadas.
-- [ ] Requiere reescritura.
+- La especificación puede usarse como borrador con las correcciones anotadas.
+- Requiere reescritura.
 - Correcciones aplicadas por mí antes de compartirla:
 
 ## Reflexión sobre la iteración del prompt

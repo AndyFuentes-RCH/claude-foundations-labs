@@ -1,7 +1,7 @@
 # Proyecto 1 · Colaboración efectiva con Claude
 
 **Cursos relacionados:** AI Fluency: Framework & Foundations · Claude 101
-**Estado:** Pendiente de credenciales o intervención — materiales listos; falta la ejecución LIVE y tu revisión humana.
+**Estado:** Pendiente de credenciales o intervención — materiales listos; la ejecución LIVE requiere API key.
 
 ## Objetivo
 Convertir notas desordenadas de una reunión sobre una integración fintech (sintética) en una especificación técnica,
@@ -14,7 +14,7 @@ comparando un prompt inicial con uno mejorado y aplicando revisión humana.
 | [prompts/01-prompt-inicial.md](prompts/01-prompt-inicial.md) | Prompt ingenuo de una línea |
 | [prompts/02-prompt-mejorado.md](prompts/02-prompt-mejorado.md) | Prompt con rol, audiencia, estructura, reglas y delimitadores |
 | [evaluacion/criterios.md](evaluacion/criterios.md) | Rúbrica: criterios automáticos y humanos |
-| [revision-humana.md](revision-humana.md) | Plantilla de revisión **para que la completes tú** |
+| [revision-humana.md](revision-humana.md) | Plantilla de revisión humana |
 | `outputs/` | Salidas reales de Claude con metadatos (se crean al ejecutar en LIVE) |
 
 ## Las 4D de AI Fluency aplicadas
@@ -33,9 +33,8 @@ export CFL_ALLOW_LIVE_CALLS=true
 .venv/bin/python -m cfl.labs.prompt_lab ejecutar 01 --provider anthropic
 .venv/bin/python -m cfl.labs.prompt_lab evaluar 01   # genera evaluacion/resultados-automaticos.md
 ```
-Sin credenciales el comando termina en **PENDIENTE** y no genera contenido. Después, completa
+Sin credenciales el comando termina en **PENDIENTE** y no genera contenido. La revisión humana se documenta en
 [revision-humana.md](revision-humana.md).
 
-## Pendiente
-- [ ] Ejecutar en LIVE (requiere tu API key y autorización de consumo).
-- [ ] Revisión humana de ambas salidas por Andy Fuentes.
+## Alcance de esta entrega
+Incluye insumo, ambos prompts, rúbrica, evaluador automático y plantilla de revisión humana. Las salidas LIVE y su revisión no forman parte de esta entrega porque requieren una API key.

@@ -1,4 +1,4 @@
-# Limitaciones y pasos pendientes
+# Limitaciones y alcance
 
 ## Limitaciones conocidas
 - **Sin ejecuciones LIVE.** En la sesión de construcción no había credenciales de Claude API, GCP ni AWS. El
@@ -15,15 +15,16 @@
 - **Interfaz sin autenticación.** Pensada para demostración local (`127.0.0.1`). No exponerla públicamente.
 - **MCP por HTTP sin autenticación.** El transporte Streamable HTTP es solo para pruebas locales.
 
-## Pendientes por laboratorio
-| Proyecto | Pendiente | Quién | Requiere |
-|----------|-----------|-------|----------|
-| 1 | Ejecutar ambos prompts en LIVE y completar `revision-humana.md` | Andy | API key + autorizar ~2 llamadas |
-| 2 | Ejecución LIVE con los casos de demostración | Andy (o Claude con tu autorización) | API key + autorizar consumo |
-| 3 | Práctica en Claude.ai y capturas | Andy | Cuenta de Claude.ai |
-| 5 | Proyecto GCP, Model Garden, ADC y prueba real | Andy | Credenciales GCP + autorizar gasto |
-| 6 | Cuenta AWS, acceso al modelo, perfil con política mínima y prueba real | Andy | Credenciales AWS + autorizar gasto |
-| 7 | Aprobar `remesas-sinteticas` en Claude Code (o configurar Claude Desktop) y probarlo | Andy | Aprobación del servidor |
+## Alcance de la validación por laboratorio
+| Proyecto | Validado en esta entrega | Validación en vivo requiere |
+|----------|--------------------------|-----------------------------|
+| 1 | Materiales, rúbrica y evaluador automático (probado) | API key (~2 llamadas) y revisión humana |
+| 2 | Bucle, herramientas y errores (pytest + MOCK) | API key |
+| 3 | Documento, prompts y guía | Sesión en Claude.ai |
+| 4 | Implementación con Claude Code, pruebas y medición | — |
+| 5 | Adaptador Vertex (pruebas sin red) | Proyecto GCP, modelo habilitado y ADC |
+| 6 | Adaptador Bedrock (pruebas sin red) | Cuenta AWS, acceso al modelo y política mínima |
+| 7 | Servidor y cliente MCP (memoria, stdio, HTTP) | Aprobar el servidor en Claude Code o Claude Desktop |
 
 ## Mejoras posibles
 - Evaluación automática con Claude como juez (con rúbrica) para el Proyecto 1, siempre complementada por revisión humana.
