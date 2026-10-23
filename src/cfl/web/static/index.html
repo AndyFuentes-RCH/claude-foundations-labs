@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Foundations Labs</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Claude Foundations Labs</h1>
+      <p class="subtitle">Portafolio de Andy Fuentes · Caso sintético de soporte de remesas · Datos 100&nbsp;% ficticios</p>
+    </div>
+    <div class="legend" aria-label="Modos de ejecución">
+      <span class="badge mode-LIVE">LIVE</span><span class="legend-text">llamada real a Claude</span>
+      <span class="badge mode-MOCK">MOCK</span><span class="legend-text">local, sin Claude</span>
+      <span class="badge mode-PENDIENTE">PENDIENTE</span><span class="legend-text">faltan credenciales o intervención</span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar" aria-label="Laboratorios">
+      <label for="lab-select" class="sr-only">Laboratorio</label>
+      <select id="lab-select" class="lab-select-mobile"></select>
+      <ul id="lab-list"></ul>
+    </nav>
+
+    <main id="main">
+      <section class="card" id="lab-header">
+        <div class="lab-title-row">
+          <h2 id="lab-title">Cargando…</h2>
+          <span id="lab-status" class="status"></span>
+        </div>
+        <p id="lab-courses" class="muted"></p>
+        <p id="lab-note"></p>
+        <p class="muted small">Documentación: <code id="lab-readme"></code></p>
+      </section>
+
+      <section class="card run-meta" aria-label="Ejecución">
+        <dl class="meta-grid">
+          <div><dt>Proveedor</dt><dd id="meta-provider">—</dd></div>
+          <div><dt>Modelo</dt><dd id="meta-model">—</dd></div>
+          <div><dt>Modo de ejecución</dt><dd><span id="meta-mode" class="badge">—</span></dd></div>
+        </dl>
+      </section>
+
+      <section class="card" id="panel-assistant" hidden>
+        <form id="assistant-form">
+          <div class="form-row">
+            <label for="provider-select">Proveedor</label>
+            <select id="provider-select"></select>
+          </div>
+          <label for="query">Consulta</label>
+          <textarea id="query" rows="3" maxlength="2000" placeholder="Ej.: ¿Cuál es el estado de RMX-2026-000104?"></textarea>
+          <div id="examples" class="chips"></div>
+          <button type="submit" id="run-btn">Ejecutar</button>
+        </form>
+      </section>
+
+      <section class="card" id="panel-mcp" hidden>
+        <form id="mcp-form">
+          <label for="mcp-id">transaction_id para la herramienta MCP <code>get_transaction_status</code></label>
+          <input id="mcp-id" type="text" autocomplete="off" placeholder="RMX-2026-000104">
+          <div id="mcp-examples" class="chips"></div>
+          <button type="submit">Llamar herramienta (cliente MCP local)</button>
+        </form>
+        <p class="muted small">Esta prueba usa el cliente MCP local en memoria. <strong>No interviene Claude.</strong>
+          Para la conexión real con Claude, ver labs/07-model-context-protocol/README.md.</p>
+      </section>
+
+      <section class="card" id="panel-prompt" hidden>
+        <p id="prompt-intro"></p>
+        <div class="form-row">
+          <label for="prompt-provider">Proveedor</label>
+          <select id="prompt-provider"></select>
+          <button type="button" id="prompt-run">Ejecutar por API</button>
+        </div>
+        <div id="prompt-outputs" class="muted small"></div>
+        <div id="materials"></div>
+      </section>
+
+      <section class="card" id="panel-result">
+        <h3>Consulta</h3>
+        <pre id="out-query" class="box">—</pre>
+        <h3>Respuesta</h3>
+        <pre id="out-answer" class="box answer" aria-live="polite">—</pre>
+        <div id="out-alerts"></div>
+        <h3>Herramientas utilizadas</h3>
+        <table class="tools">
+          <thead><tr><th>#</th><th>Herramienta</th><th>Argumentos</th><th>Resultado</th></tr></thead>
+          <tbody id="out-tools"><tr><td colspan="4" class="muted">—</td></tr></tbody>
+        </table>
+        <p id="out-footer" class="muted small"></p>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

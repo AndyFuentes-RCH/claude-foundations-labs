@@ -135,7 +135,9 @@ class Toolbox:
         try:
             args = model.model_validate(arguments)
         except ValidationError as exc:
-            details = "; ".join(f"{'.'.join(map(str, e['loc'])) or 'input'}: {e['msg']}" for e in exc.errors())
+            details = "; ".join(
+                f"{'.'.join(map(str, e['loc'])) or 'input'}: {e['msg'].removeprefix('Value error, ')}" for e in exc.errors()
+            )
             return self._error(name, arguments, "INVALID_ARGUMENT", details)
         try:
             return func(args)
